@@ -1,6 +1,6 @@
 # Agent Balance Kit
 
-A Windows-first, cross-platform scaffold for a sustainable, attention-aware agent workflow with [Claude Code](https://code.claude.com) — inspired by Zack Proser's "developer balance" talk.
+A Windows-first, cross-platform scaffold for a sustainable, attention-aware agent workflow with [Claude Code](https://code.claude.com) — inspired by the talk [_Your Attention Is the Bottleneck, Not Your Agents_](https://www.youtube.com/watch?v=so9l_MwS2yg) by Zack Proser (WorkOS).
 
 **The point is not "more agents." Agents scale; human attention does not.** This kit keeps human attention, review quality, and body state from becoming the failure mode — by dispatching work **queue-only**, gating completion on **evidence**, and throttling scope to your **capacity**. Nothing here auto-merges, auto-pushes, or runs an agent unsupervised.
 
