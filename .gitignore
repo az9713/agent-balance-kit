@@ -1,0 +1,12 @@
+# Agent Balance Kit runtime outputs
+.agent-harness/signals/*.json
+.agent-harness/health_state/*.json
+.agent-harness/browser-evidence/
+.agent-harness/dispatches/
+.agent-harness/locks/
+.agent-harness/session-summaries/
+.agent-harness/weekly/
+.agent-harness/skill-drafts/
+.agent-harness/review-queue.md
+HEALTH_STATE.md
+.env

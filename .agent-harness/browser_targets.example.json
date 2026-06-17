@@ -1,0 +1,13 @@
+{
+  "base_url": "http://127.0.0.1:3000",
+  "start_command": "npm run dev",
+  "startup_wait_seconds": 8,
+  "targets": [
+    {
+      "name": "home-page-smoke",
+      "path": "/",
+      "assert_text": "",
+      "screenshot": true
+    }
+  ]
+}
