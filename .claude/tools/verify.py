@@ -39,7 +39,7 @@ def run(cmd: list[str], timeout: int = 120) -> dict[str, Any]:
         }
     except FileNotFoundError as e:
         return {"cmd": cmd, "ok": False, "returncode": 127, "seconds": 0, "stderr_tail": str(e)}
-    except subprocess.TimeoutExpired as e:
+    except subprocess.TimeoutExpired:
         return {"cmd": cmd, "ok": False, "returncode": 124, "seconds": timeout, "stderr_tail": f"Timed out after {timeout}s"}
 
 def node_scripts() -> dict[str, str]:

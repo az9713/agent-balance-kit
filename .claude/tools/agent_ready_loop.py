@@ -15,7 +15,6 @@ import argparse
 import os
 import re
 import subprocess
-import sys
 from pathlib import Path
 
 ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())).resolve()
@@ -82,7 +81,7 @@ def main() -> int:
     print(f"Prompt ready:   {prompt}")
     print("\nStart Claude Code:")
     print(f"cd {wt}")
-    print(f"claude")
+    print("claude")
     print(f"Then paste: Read {prompt} and execute the task contract.")
 
     if args.open_code:

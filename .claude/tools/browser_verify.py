@@ -6,7 +6,7 @@ Install when needed:
   python -m playwright install chromium
 """
 from __future__ import annotations
-import argparse, datetime as dt, json, os, signal, subprocess, sys, time
+import argparse, datetime as dt, json, os, signal, subprocess, time
 from pathlib import Path
 
 ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())).resolve()

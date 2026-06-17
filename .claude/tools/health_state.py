@@ -5,7 +5,7 @@ No medical advice. This only gates engineering workload.
 """
 from __future__ import annotations
 
-import argparse, datetime as dt, json, os, re, sys, urllib.request
+import argparse, datetime as dt, json, os, re, urllib.request
 from pathlib import Path
 
 ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())).resolve()

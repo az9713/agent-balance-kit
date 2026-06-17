@@ -1,0 +1,14 @@
+# Lint policy for the kit's own tools.
+#
+# The tools are deliberately written in a compact style: one-line guard clauses
+# (`if not x: return`) and grouped imports (`import os, sys, json`). That is an
+# intentional choice, not a defect, so the pure-layout rules below are waived.
+# Correctness rules (pyflakes F-codes: unused imports/vars, bad f-strings) and
+# readability rules (e.g. E741 ambiguous names) stay enforced.
+
+[lint]
+ignore = [
+    "E401",  # multiple imports on one line — grouped imports are intentional
+    "E701",  # multiple statements on one line (colon) — one-line guards
+    "E702",  # multiple statements on one line (semicolon) — one-line guards
+]

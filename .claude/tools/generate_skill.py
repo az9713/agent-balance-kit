@@ -5,7 +5,7 @@ This is deterministic scaffolding, not a replacement for Claude's judgment. It c
 a reviewable SKILL.md draft that Claude/human can refine.
 """
 from __future__ import annotations
-import argparse, datetime as dt, os, re, textwrap
+import argparse, datetime as dt, os, re
 from pathlib import Path
 
 ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())).resolve()

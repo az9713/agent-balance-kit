@@ -5,7 +5,7 @@ This is intentionally credential-optional and safe. It writes normalized signals
 .agent-harness/signals/latest.json. It does not dispatch agents or edit code.
 """
 from __future__ import annotations
-import argparse, datetime as dt, json, os, sys, time, urllib.parse, urllib.request
+import argparse, datetime as dt, json, os, time, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())).resolve()
@@ -45,7 +45,7 @@ def sync_github() -> list[dict]:
         if 'pull_request' in issue: continue
         out.append({
             "source":"github", "kind":"issue", "id":str(issue.get('number')), "title":issue.get('title',''),
-            "url":issue.get('html_url',''), "body":issue.get('body') or '', "labels":[l.get('name') for l in issue.get('labels', [])],
+            "url":issue.get('html_url',''), "body":issue.get('body') or '', "labels":[lbl.get('name') for lbl in issue.get('labels', [])],
             "status":"raw"
         })
     return out
@@ -75,7 +75,7 @@ def sync_linear() -> list[dict]:
         out.append({
             "source":"linear", "kind":"issue", "id":node.get('identifier') or node.get('id'), "title":node.get('title',''),
             "url":node.get('url',''), "body":node.get('description') or '', "priority":node.get('priority'),
-            "labels":[l.get('name') for l in node.get('labels',{}).get('nodes',[])], "status":"raw"
+            "labels":[lbl.get('name') for lbl in node.get('labels',{}).get('nodes',[])], "status":"raw"
         })
     return out
 
