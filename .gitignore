@@ -10,3 +10,6 @@
 .agent-harness/review-queue.md
 HEALTH_STATE.md
 .env
+
+# git worktrees created by agent_ready_loop.py (not part of the kit source)
+.worktrees/

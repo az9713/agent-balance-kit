@@ -1,0 +1,20 @@
+{
+  "synced_at": "2026-06-17T02:42:17.218706+00:00",
+  "signals": [
+    {
+      "source": "github",
+      "status": "skipped",
+      "reason": "GITHUB_REPOSITORY not set"
+    },
+    {
+      "source": "linear",
+      "status": "skipped",
+      "reason": "LINEAR_API_KEY not set"
+    },
+    {
+      "source": "slack",
+      "status": "skipped",
+      "reason": "SLACK_BOT_TOKEN or SLACK_CHANNEL_IDS not set"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "synced_at": "2026-06-16T09:00:00Z",
+  "_note": "Demo fixture standing in for a real sync_external_signals.py run that had Slack/GitHub credentials. Used to showcase the deterministic triager. No real secrets.",
+  "signals": [
+    {
+      "source": "github",
+      "kind": "issue",
+      "id": "42",
+      "title": "Sentence-case headings without mangling acronyms",
+      "url": "https://github.com/owner/repo/issues/42",
+      "body": "Headings get fully lower-cased and SSO becomes Sso. Acceptance: SSO stays SSO, API stays API, 'HELLO WORLD' becomes 'Hello world'. Verify with: python -m pytest tests/test_sentence_case.py -q",
+      "labels": ["agent-ready", "bug"],
+      "status": "raw"
+    },
+    {
+      "source": "slack",
+      "kind": "message",
+      "id": "1718531000.0001",
+      "title": "hey can someone look at the flaky login test",
+      "body": "the login test is flaky and fails sometimes on CI, please fix when you get a chance",
+      "labels": [],
+      "status": "raw"
+    }
+  ]
+}

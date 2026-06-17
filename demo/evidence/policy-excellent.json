@@ -1,0 +1,19 @@
+{
+  "date": "2026-06-16",
+  "source": "manual",
+  "max_implementation_agents": 3,
+  "night_shift": "dispatch-allowed",
+  "blocked_work_types": [
+    "auto-merge",
+    "production deploy without human approval"
+  ],
+  "reason": "capacity signal is strong, but critic and evidence gates still apply.",
+  "inputs": {
+    "source": "manual",
+    "date": "2026-06-16",
+    "sleep": "excellent",
+    "energy": "high",
+    "stress": "low",
+    "notes": "Demo run: strong capacity, dispatch allowed but no auto-merge."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "task": {
+    "id": "TASK-0F2255",
+    "status": "agent-ready",
+    "branch": "agent/task-0f2255",
+    "title": "Sentence-case headings without mangling acronyms",
+    "block": "- [ ] TASK-0F2255 | agent-ready | branch: agent/task-0f2255 | title: Sentence-case headings without mangling acronyms\n  - source: github:42 https://github.com/owner/repo/issues/42\n  - goal: [fill] Convert the source ask into one observable outcome.\n  - raw_excerpt: Headings get fully lower-cased and SSO becomes Sso. Acceptance: SSO stays SSO, API stays API, 'HELLO WORLD' becomes 'Hello world'. Verify with: python -m pytest tests/test_sentence_case.py -q\n  - acceptance:\n    - [fill] Add concrete acceptance criteria before dispatch.\n  - verification:\n    - [fill] Add exact verification command before dispatch.\n\n"
+  },
+  "created_at": "2026-06-16T19:53:57.057174",
+  "command": [
+    "python",
+    ".claude/tools/agent_ready_loop.py",
+    "--task",
+    "TASK-0F2255"
+  ],
+  "returncode": 0,
+  "stdout": "HEAD is now at 157e2cc base: agent_balance_kit_v2 before demo run\n+ git worktree add -b agent/task-0f2255 <KIT_ROOT>\\.worktrees\\TASK-0F2255\n\nWorktree ready: <KIT_ROOT>\\.worktrees\\TASK-0F2255\nPrompt ready:   <KIT_ROOT>\\.worktrees\\TASK-0F2255\\.agent-harness\\TASK-0F2255-prompt.md\n\nStart Claude Code:\ncd <KIT_ROOT>\\.worktrees\\TASK-0F2255\nclaude\nThen paste: Read <KIT_ROOT>\\.worktrees\\TASK-0F2255\\.agent-harness\\TASK-0F2255-prompt.md and execute the task contract.\n",
+  "stderr": "Preparing worktree (new branch 'agent/task-0f2255')\n"
+}
