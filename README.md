@@ -1,8 +1,17 @@
-# Agent Balance Kit v2
+# Agent Balance Kit
 
-A Windows-first, cross-platform scaffold for a Zack Proser-style sustainable agent workflow.
+A Windows-first, cross-platform scaffold for a sustainable, attention-aware agent workflow with [Claude Code](https://code.claude.com) — inspired by Zack Proser's "developer balance" talk.
 
-The point is not "more agents." The point is to keep human attention, review quality, and body state from becoming the failure mode.
+**The point is not "more agents." Agents scale; human attention does not.** This kit keeps human attention, review quality, and body state from becoming the failure mode — by dispatching work **queue-only**, gating completion on **evidence**, and throttling scope to your **capacity**. Nothing here auto-merges, auto-pushes, or runs an agent unsupervised.
+
+> This is the "v2" layout: flattened, with the external-signal, browser-verification, night-shift, and health layers included. Versioned releases are tagged from here.
+
+## Contents
+
+- **[Get started](#0-prerequisites)** — prerequisites → install → first safe run
+- **[Documentation](docs/index.md)** — full guides, concepts, reference, and ADRs (35 pages)
+- **[See it work](demo/RUN_REPORT.md)** — a live, fully sanitized demo run with captured evidence proving each claim
+- **[Architecture](ARCHITECTURE.md)** · **[Operating manual](CLAUDE.md)** · **[What's new in v2](docs/overview/whats-new-in-v2.md)**
 
 ## What v2 adds
 
@@ -61,9 +70,20 @@ claude --version
 
 ---
 
-## 1. Install into an existing repo
+## 1. Install
 
-From the target repo:
+**Try it standalone** — clone and run the safe checks (no credentials, no autonomous coding):
+
+```powershell
+git clone https://github.com/az9713/agent-balance-kit.git
+cd agent-balance-kit
+python .claude/tools/health_state.py --print
+python .claude/tools/verify.py --fast
+```
+
+See [`demo/RUN_REPORT.md`](demo/RUN_REPORT.md) for exactly what a full run looks like and produces.
+
+**Copy into an existing repo** — from the target repo (full guide: [docs/guides/install-into-a-repo.md](docs/guides/install-into-a-repo.md)):
 
 ```powershell
 Expand-Archive .\agent_balance_kit_v2.zip -DestinationPath .\agent_balance_kit_v2
